@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Sundar Photography</title>
+<link rel="stylesheet" href="styles.css">
+<script defer src="script.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<header class="navbar">
+<h1 class="logo">
+  SJ Frames <img src="image.png" alt="Camera" class="logo-icon">
+</h1>
+
+
+  <nav>
+    <a href="#" onclick="showSection('home')">Home</a>
+    <a href="#" onclick="showSection('portfolio')">Portfolio</a>
+    <a href="#" onclick="showSection('services')">Services</a>
+    <a href="#" onclick="showSection('contact')">Contact</a>
+    <a href="#" onclick="showSection('support')">Support</a>
+  </nav>
+</header>
+
+
+<!-- HOME -->
+<section id="home" class="page-section active hero">
+  <div class="hero-text">
+    <h2>Hello!</h2>
+    <h3>I’m Sundarraj</h3>
+    <p>
+      Passionate photographer capturing weddings, events, portraits, and cinematic stories.
+    </p>
+
+    <div class="hero-actions">
+      <button class="btn" onclick="showSection('portfolio')">
+        View Work
+      </button>
+
+      <button class="btn outline" onclick="showSection('contact')">
+        Book Event
+      </button>
+    </div>
+  </div>
+</section>
+
+
+<!-- PORTFOLIO -->
+<section id="portfolio" class="page-section">
+  <h2 class="title">Portfolio</h2>
+  <p class="section-desc">
+    A selection of my recent photography work
+  </p>
+
+  <div class="portfolio-grid">
+    <div class="portfolio-item">
+      <img src="DSC03468.JPG">
+      <span>Wedding</span>
+    </div>
+
+    <div class="portfolio-item">
+      <img src="DSC03486.JPG">
+      <span>Event</span>
+    </div>
+
+    <div class="portfolio-item">
+      <img src="DSC03480.JPG">
+      <span>Portrait</span>
+    </div>
+
+    <div class="portfolio-item">
+      <img src="DSC03493.JPG">
+      <span>Street</span>
+    </div>
+  </div>
+</section>
+
+
+<!-- SERVICES -->
+<section id="services" class="page-section">
+  <h2 class="title">Services</h2>
+  <p class="section-desc">Professional photography services for every occasion</p>
+
+  <div class="service-models">
+
+    <!-- WEDDING -->
+    <div class="service-card">
+      <h3>Wedding Photography</h3>
+      <p class="short">Complete wedding storytelling</p>
+
+      <div class="service-details">
+        <p>
+          Full wedding coverage capturing rituals, emotions,
+          candid moments and cinematic frames.
+        </p>
+        <ul>
+          <li>✔ Full day coverage</li>
+          <li>✔ Candid + Traditional</li>
+          <li>✔ HD edited photos</li>
+          <li>✔ On-time delivery</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- EVENT -->
+    <div class="service-card" >
+      <h3>Event Photography</h3>
+      <p class="short">Birthdays, engagements & functions</p>
+
+      <div class="service-details">
+        <p>
+          Professional coverage for personal and corporate events
+          with natural expressions and clean lighting.
+        </p>
+        <ul>
+          <li>✔ Birthday & Engagement</li>
+          <li>✔ Corporate events</li>
+          <li>✔ High-quality output</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- PORTRAIT -->
+    <div class="service-card">
+      <h3>Portrait Shoots</h3>
+      <p class="short">Personal & couple portraits</p>
+
+      <div class="service-details">
+        <p>
+          Creative portrait photography for individuals and couples
+          with aesthetic tones and professional editing.
+        </p>
+        <ul>
+          <li>✔ Indoor / Outdoor</li>
+          <li>✔ Instagram-ready</li>
+          <li>✔ Clean retouching</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- VIDEO -->
+    <div class="service-card">
+      <h3>Video Shooting</h3>
+      <p class="short">Cinematic event videos</p>
+
+      <div class="service-details">
+        <p>
+          Short films, event highlights, reels and cinematic
+          storytelling videos.
+        </p>
+        <ul>
+          <li>✔ HD / 4K</li>
+          <li>✔ Smooth transitions</li>
+          <li>✔ Social media format</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- CONTACT -->
+<section id="contact" class="page-section">
+  <h2 class="title">Contact</h2>
+
+  <p class="section-desc">
+    Have an event coming up? Let’s talk.
+  </p>
+
+  <div class="contact-box">
+    <p>📍 Location: Kovilpatti, Tamil Nadu</p>
+    <p>📸 Camera: Sony ZV-E10</p>
+    <p>🕒 Available for bookings</p>
+  </div>
+
+  <button class="btn big"
+    onclick="window.open('https://wa.me/919150900482')">
+    WhatsApp Now !!
+  </button>
+</section>
+
+
+<!-- SUPPORT -->
+<section id="support" class="page-section">
+  <h2 class="title">Support & Info</h2>
+
+  <div class="support-box">
+    <p>📧 Email: sj2512frames@email.com</p>
+    <p>📷 Instagram: @SJ_Frames</p>
+    <p>📄 Booking terms available on request</p>
+    <p>⏱ Response within 24 hours</p>
+  </div>
+</section>
+
+
+<footer>
+  © 2026 Sundar Photography
+</footer>
+
+</body>
+</html>
