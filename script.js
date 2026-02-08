@@ -1,23 +1,62 @@
+/* =========================
+   PAGE SECTION CONTROL
+========================= */
 function showSection(id) {
-  document.querySelectorAll('.page-section')
-    .forEach(sec => sec.classList.remove('active'));
 
-  document.getElementById(id).classList.add('active');
+  document.querySelectorAll('.page-section')
+    .forEach(section => section.classList.remove('active'));
+
+  const target = document.getElementById(id);
+  if (target) target.classList.add('active');
+
+  window.scrollTo({ top: 0, behavior: 'smooth' });
 }
-document.getElementById('nav-home').addEventListener('click', () => showSection('home'));
+
+/* =========================
+   SERVICES – DESKTOP + MOBILE
+========================= */
 const serviceCards = document.querySelectorAll('.service-card');
 
+/* Desktop hover */
 serviceCards.forEach(card => {
 
-  // Mouse enter → open only this card
   card.addEventListener('mouseenter', () => {
-    serviceCards.forEach(c => c.classList.remove('active'));
-    card.classList.add('active');
+    if (window.innerWidth > 768) {
+      closeAllServices();
+      card.classList.add('active');
+    }
   });
 
-  // Mouse leave → close this card
   card.addEventListener('mouseleave', () => {
-    card.classList.remove('active');
+    if (window.innerWidth > 768) {
+      card.classList.remove('active');
+    }
   });
 
 });
+
+/* Mobile tap */
+serviceCards.forEach(card => {
+  card.addEventListener('click', (e) => {
+    if (window.innerWidth <= 768) {
+      e.stopPropagation();
+
+      const isOpen = card.classList.contains('active');
+      closeAllServices();
+
+      if (!isOpen) card.classList.add('active');
+    }
+  });
+});
+
+/* Tap outside → close */
+document.addEventListener('click', () => {
+  if (window.innerWidth <= 768) {
+    closeAllServices();
+  }
+});
+
+/* Helper */
+function closeAllServices() {
+  serviceCards.forEach(c => c.classList.remove('active'));
+}

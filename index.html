@@ -1,206 +1,308 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Sundar Photography</title>
-<link rel="stylesheet" href="styles.css">
-<script defer src="script.js"></script>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <title>SJ FRAMES | Photography</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <!-- CSS -->
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- JS -->
+  <script defer src="script.js"></script>
 </head>
+<script>
+document.querySelectorAll('.service-card').forEach(card => {
+  card.addEventListener('click', () => {
+
+    document.querySelectorAll('.service-card').forEach(c => {
+      if (c !== card) c.classList.remove('active');
+    });
+
+    card.classList.toggle('active');
+  });
+});
+</script>
 
 <body>
 
-<!-- NAVBAR -->
+<!-- ================= NAVBAR ================= -->
 <header class="navbar">
-<h1 class="logo">
-  SJ Frames <img src="image.png" alt="Camera" class="logo-icon">
-</h1>
+  <div class="logo" ><img src="image.png" alt="Camera" class="logo-icon">SJ PHOTOGRAPHY</div>
 
-
-  <nav>
-    <a href="#" onclick="showSection('home')">Home</a>
-    <a href="#" onclick="showSection('portfolio')">Portfolio</a>
-    <a href="#" onclick="showSection('services')">Services</a>
-    <a href="#" onclick="showSection('contact')">Contact</a>
-    <a href="#" onclick="showSection('support')">Support</a>
-  </nav>
+<nav>
+  <a href="#" onclick="showSection('home')">Home</a>
+  <a href="#" onclick="showSection('services')">Services</a>
+  <a href="#" onclick="showSection('portfolio')">Recent Shoot</a>
+  <a href="#" onclick="showSection('contact')">Contact</a>
+</nav>
+<a href="https://wa.me/919150900482?text=Hello%20I%20am%20interested%20in%20your%20photography%20services"
+  class="btn outline" id="bookBtm" target="_blank">
+  BOOK NOW
+</a>
 </header>
 
+<!-- ================= HERO ================= -->
+<section id="home" class="hero page-section active">
+  <div class="hero-container">
 
-<!-- HOME -->
-<section id="home" class="page-section active hero">
-  <div class="hero-text">
-    <h2>Hello!</h2>
-    <h3>I’m Sundarraj</h3>
-    <p>
-      Passionate photographer capturing weddings, events, portraits, and cinematic stories.
-    </p>
-
-    <div class="hero-actions">
-      <button class="btn" onclick="showSection('portfolio')">
-        View Work
-      </button>
-
-      <button class="btn outline" onclick="showSection('contact')">
-        Book Event
-      </button>
+    <div class="hero-image">
+      <img src="p13.jpeg" alt="Photographer">
     </div>
+
+    <div class="hero-content">
+      <h1>HELLO!</h1>
+      <h2>I'M SUNDARRAJ</h2>
+      <p>
+        A professional wedding, portrait and cinematic photographer.
+        I capture emotions and stories through my lens.
+      </p>
+
+      <button class="btn outline" onclick="showSection('contact')">CONTACT ME</button>
+    </div>
+
   </div>
 </section>
 
+<!-- ================= SERVICES ================= -->
+<section id="services" class="services page-section">
+  <h2 class="section-title">SERVICES</h2>
 
-<!-- PORTFOLIO -->
-<section id="portfolio" class="page-section">
-  <h2 class="title">Portfolio</h2>
-  <p class="section-desc">
-    A selection of my recent photography work
-  </p>
+  <div class="service-grid">
+
+  <!-- Service 1: Wedding Photography -->
+  <div class="service-card">
+    <h3>Wedding Photography</h3>
+    <p>Complete wedding storytelling.</p>
+    <a href="javascript:void(0)" class="view-service">
+      VIEW SERVICE → <span class="arrow">→</span>
+    </a>
+    <div class="service-details">
+      <p>
+        Full-day coverage, candid moments, cinematic edits,
+        premium album & digital delivery.
+      </p>
+      <button class="btn small" onclick="showSection('contact')">
+        BOOK THIS SERVICE
+      </button>
+    </div>
+  </div>
+
+  <!-- Service 2: Portrait Photography -->
+  <div class="service-card">
+    <h3>Portrait Photography</h3>
+    <p>Professional portraits for personal or business use.</p>
+    <a href="javascript:void(0)" class="view-service">
+      VIEW SERVICE → <span class="arrow">→</span>
+    </a>
+    <div class="service-details">
+      <p>
+        Studio or outdoor shoot, professional lighting,
+        retouched images, and digital delivery.
+      </p>
+      <button class="btn small" onclick="showSection('contact')">
+        BOOK THIS SERVICE
+      </button>
+    </div>
+  </div>
+
+  <!-- Service 3: Birthday Photography -->
+  <div class="service-card">
+    <h3>Birthday Photography</h3>
+    <p>Capture all the joy and memories of your special day.</p>
+    <a href="javascript:void(0)" class="view-service">
+      VIEW SERVICE → <span class="arrow">→</span>
+    </a>
+    <div class="service-details">
+      <p>
+        Fun and candid shots, family & friends portraits,
+        cake-cutting moments, decorations, and party highlights
+        professionally captured and edited.
+      </p>
+      <button class="btn small" onclick="showSection('contact')">
+        BOOK THIS SERVICE
+      </button>
+    </div>
+  </div>
+
+  <!-- Service 4: Naming Ceremony Photography -->
+  <div class="service-card">
+    <h3>Naming Ceremony Photography</h3>
+    <p>Preserve the precious moments of your little one’s special day.</p>
+    <a href="javascript:void(0)" class="view-service">
+      VIEW SERVICE → <span class="arrow">→</span>
+    </a>
+    <div class="service-details">
+      <p>
+        Candid family shots, rituals, decorations, baby portraits,
+        and heartfelt moments captured with care and creativity.
+      </p>
+      <button class="btn small" onclick="showSection('contact')">
+        BOOK THIS SERVICE
+      </button>
+    </div>
+  </div>
+
+  <!-- Service 5: Event Photography -->
+  <div class="service-card">
+    <h3>Event Photography</h3>
+    <p>Capture your special events with perfection.</p>
+    <a href="javascript:void(0)" class="view-service">
+      VIEW SERVICE → <span class="arrow">→</span>
+    </a>
+    <div class="service-details">
+      <p>
+        Corporate events, birthdays, parties, and live coverage
+        with professional editing.
+      </p>
+      <button class="btn small" onclick="showSection('contact')">
+        BOOK THIS SERVICE
+      </button>
+    </div>
+  </div>
+
+  <!-- Service 6: Engagement Photography -->
+  <div class="service-card">
+    <h3>Engagement Photography</h3>
+    <p>Romantic pre-wedding shoots that tell your love story.</p>
+    <a href="javascript:void(0)" class="view-service">
+      VIEW SERVICE → <span class="arrow">→</span>
+    </a>
+    <div class="service-details">
+      <p>
+        Outdoor romantic session, creative poses, and digital gallery
+        to cherish forever.
+      </p>
+      <button class="btn small" onclick="showSection('contact')">
+        BOOK THIS SERVICE
+      </button>
+    </div>
+  </div>
+
+  <!-- Service 7: Maternity Photography -->
+  <div class="service-card">
+    <h3>Maternity Photography</h3>
+    <p>Beautiful and intimate memories of your pregnancy journey.</p>
+    <a href="javascript:void(0)" class="view-service">
+      VIEW SERVICE → <span class="arrow">→</span>
+    </a>
+    <div class="service-details">
+      <p>
+        Studio or outdoor maternity shoots, soft lighting,
+        elegant poses, and retouched photos.
+      </p>
+      <button class="btn small" onclick="showSection('contact')">
+        BOOK THIS SERVICE
+      </button>
+    </div>
+  </div>
+
+  <!-- Service 8: Kids Photography -->
+  <div class="service-card">
+    <h3>Kids Photography</h3>
+    <p>Fun, candid moments of your little ones growing up.</p>
+    <a href="javascript:void(0)" class="view-service">
+      VIEW SERVICE → <span class="arrow">→</span>
+    </a>
+    <div class="service-details">
+      <p>
+        Playful sessions, natural expressions, outdoor or indoor,
+        digitally retouched images for lasting memories.
+      </p>
+      <button class="btn small" onclick="showSection('contact')">
+        BOOK THIS SERVICE
+      </button>
+    </div>
+  </div>
+
+  <!-- Service 9: Fashion Photography -->
+  <div class="service-card">
+    <h3>Fashion Photography</h3>
+    <p>Professional fashion shoots with style and creativity.</p>
+    <a href="javascript:void(0)" class="view-service">
+      VIEW SERVICE → <span class="arrow">→</span>
+    </a>
+    <div class="service-details">
+      <p>
+        Editorial style shoots, professional lighting,
+        makeup & styling, studio or outdoor settings.
+      </p>
+      <button class="btn small" onclick="showSection('contact')">
+        BOOK THIS SERVICE
+      </button>
+    </div>
+  </div>
+
+  <!-- Service 10: Product Photography -->
+  <div class="service-card">
+    <h3>Product Photography</h3>
+    <p>High-quality images to showcase your products.</p>
+    <a href="javascript:void(0)" class="view-service">
+      VIEW SERVICE → <span class="arrow">→</span>
+    </a>
+    <div class="service-details">
+      <p>
+        Studio lighting, clean backgrounds, detailed shots,
+        ready for e-commerce or marketing use.
+      </p>
+      <button class="btn small" onclick="showSection('contact')">
+        BOOK THIS SERVICE
+      </button>
+    </div>
+  </div>
+
+</div>
+
+</div>
+
+
+  </div>
+</section>
+
+<!-- ================= Recent Shoots ================= -->
+<section id="portfolio" class="portfolio page-section">
+  <h2 class="section-title">Recent Shoots</h2>
 
   <div class="portfolio-grid">
-    <div class="portfolio-item">
-      <img src="DSC03468.JPG">
-      <span>Wedding</span>
-    </div>
-
-    <div class="portfolio-item">
-      <img src="DSC03486.JPG">
-      <span>Event</span>
-    </div>
-
-    <div class="portfolio-item">
-      <img src="DSC03480.JPG">
-      <span>Portrait</span>
-    </div>
-
-    <div class="portfolio-item">
-      <img src="DSC03493.JPG">
-      <span>Street</span>
-    </div>
+    <img src="p1.jpg">
+    <img src="p2.jpg">
+    <img src="p3.jpg">
+    <img src="p4.jpeg">
+    <img src="p5.jpeg">
+    <img src="p6.jpeg">
+    <img src="p7.jpeg">
+    <img src="p8.jpeg">
+    <img src="p9.jpeg">
+    <img src="p10.jpeg">
+    <img src="p11.jpeg">
+    <img src="p12.jpeg">
+    <img src="p13.jpeg">
+    <img src="p14.jpeg">
   </div>
 </section>
 
-
-<!-- SERVICES -->
-<section id="services" class="page-section">
-  <h2 class="title">Services</h2>
-  <p class="section-desc">Professional photography services for every occasion</p>
-
-  <div class="service-models">
-
-    <!-- WEDDING -->
-    <div class="service-card">
-      <h3>Wedding Photography</h3>
-      <p class="short">Complete wedding storytelling</p>
-
-      <div class="service-details">
-        <p>
-          Full wedding coverage capturing rituals, emotions,
-          candid moments and cinematic frames.
-        </p>
-        <ul>
-          <li>✔ Full day coverage</li>
-          <li>✔ Candid + Traditional</li>
-          <li>✔ HD edited photos</li>
-          <li>✔ On-time delivery</li>
-        </ul>
-      </div>
-    </div>
-
-    <!-- EVENT -->
-    <div class="service-card" >
-      <h3>Event Photography</h3>
-      <p class="short">Birthdays, engagements & functions</p>
-
-      <div class="service-details">
-        <p>
-          Professional coverage for personal and corporate events
-          with natural expressions and clean lighting.
-        </p>
-        <ul>
-          <li>✔ Birthday & Engagement</li>
-          <li>✔ Corporate events</li>
-          <li>✔ High-quality output</li>
-        </ul>
-      </div>
-    </div>
-
-    <!-- PORTRAIT -->
-    <div class="service-card">
-      <h3>Portrait Shoots</h3>
-      <p class="short">Personal & couple portraits</p>
-
-      <div class="service-details">
-        <p>
-          Creative portrait photography for individuals and couples
-          with aesthetic tones and professional editing.
-        </p>
-        <ul>
-          <li>✔ Indoor / Outdoor</li>
-          <li>✔ Instagram-ready</li>
-          <li>✔ Clean retouching</li>
-        </ul>
-      </div>
-    </div>
-
-    <!-- VIDEO -->
-    <div class="service-card">
-      <h3>Video Shooting</h3>
-      <p class="short">Cinematic event videos</p>
-
-      <div class="service-details">
-        <p>
-          Short films, event highlights, reels and cinematic
-          storytelling videos.
-        </p>
-        <ul>
-          <li>✔ HD / 4K</li>
-          <li>✔ Smooth transitions</li>
-          <li>✔ Social media format</li>
-        </ul>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-
-<!-- CONTACT -->
-<section id="contact" class="page-section">
-  <h2 class="title">Contact</h2>
-
-  <p class="section-desc">
-    Have an event coming up? Let’s talk.
-  </p>
+<!-- ================= CONTACT ================= -->
+<section id="contact" class="contact page-section">
+  <h2 class="section-title">CONTACT</h2>
 
   <div class="contact-box">
-    <p>📍 Location: Kovilpatti, Tamil Nadu</p>
-    <p>📸 Camera: Sony ZV-E10</p>
-    <p>🕒 Available for bookings</p>
+    <p>📍 Kovilpatti, Tamil Nadu</p>
+    <p>📞 +91 91509 00482</p>
+    <p>📧 sj272128frames@gmail.com</p>
+    <br>
+    <a href="https://wa.me/919150900482?text=Hello%20I%20am%20interested%20in%20your%20photography%20services" 
+    class="btn big"target="_blank"> 
+    CONTACT ME
+  </a>
+    
   </div>
 
-  <button class="btn big"
-    onclick="window.open('https://wa.me/919150900482')">
-    WhatsApp Now !!
-  </button>
 </section>
 
 
-<!-- SUPPORT -->
-<section id="support" class="page-section">
-  <h2 class="title">Support & Info</h2>
-
-  <div class="support-box">
-    <p>📧 Email: sj2512frames@email.com</p>
-    <p>📷 Instagram: @SJ_Frames</p>
-    <p>📄 Booking terms available on request</p>
-    <p>⏱ Response within 24 hours</p>
-  </div>
-</section>
-
-
+<!-- ================= FOOTER ================= -->
 <footer>
-  © 2026 Sundar Photography
+  © 2026 SJ Frames Photography
 </footer>
 
 </body>
